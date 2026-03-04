@@ -1,6 +1,24 @@
 type Company {
     id: ID
-    name: String
-    cnpj: String
-    email: String
+    name: String!
+    cnpj: String!
+    ie: String
+    ufIe: String
+    email: String!
+    phone: String!
+}
+
+type Query {
+    companies: [Company!]!
+}
+
+type Mutation {
+    createCompany(
+        name: String!,
+        cnpj: String!,
+        ie: String,
+        ufIe: String,
+        email: String!,
+        phone: String!
+    ): Company!
 }
