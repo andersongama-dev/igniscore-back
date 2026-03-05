@@ -23,7 +23,6 @@ public class User {
     @Column(name = "role_user", nullable = true)
     private String role;
 
-    @ManyToOne
     @JoinColumn(name = "fk_id_company")
     private Integer company;
 
