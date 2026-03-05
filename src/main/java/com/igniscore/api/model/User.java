@@ -23,7 +23,7 @@ public class User {
     @Column(name = "role_user", nullable = true)
     private String role;
 
-    @JoinColumn(name = "fk_id_company")
+    @Column(name = "fk_id_company")
     private Integer company;
 
     public Integer getId() {
