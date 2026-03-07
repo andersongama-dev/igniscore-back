@@ -1,4 +1,4 @@
-package com.igniscore.api.service;
+package com.igniscore.api.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
