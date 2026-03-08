@@ -1,6 +1,7 @@
 package com.igniscore.api.service;
 
 import com.igniscore.api.model.User;
+import com.igniscore.api.model.UserRole;
 import com.igniscore.api.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +26,7 @@ public class UserService {
 
         user.setPassword(password);
 
-        user.setRole("employee");
+        user.setRole(UserRole.EMPLOYEE);
 
         return repository.save(user);
     }
