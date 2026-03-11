@@ -24,10 +24,7 @@ public class UserController {
     }
 
     @MutationMapping
-    public User createUser(@Argument String name,
-            @Argument String email,
-            @Argument String password) {
-        return service.create(name, email, password);
+    public User updateUserCompany(@Argument Integer id, @Argument Integer company) {
+        return service.updateUserCompany(id, company);
     }
-
 }

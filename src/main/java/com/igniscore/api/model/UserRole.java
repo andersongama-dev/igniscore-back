@@ -2,7 +2,8 @@ package com.igniscore.api.model;
 
 public enum UserRole {
     OWNER("owner"),
-    EMPLOYEE("employee");
+    EMPLOYEE("employee"),
+    ADMIN("admin");
 
     private final String role;
 
