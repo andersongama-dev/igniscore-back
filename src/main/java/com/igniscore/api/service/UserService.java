@@ -1,7 +1,6 @@
 package com.igniscore.api.service;
 
 import com.igniscore.api.model.User;
-import com.igniscore.api.model.UserRole;
 import com.igniscore.api.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -19,15 +18,9 @@ public class UserService {
         return repository.findAll();
     }
 
-    public User create(String name, String email, String password) {
-        User user = new User();
-        user.setName(name);
-        user.setEmail(email);
-
-        user.setPassword(password);
-
-        user.setRole(UserRole.EMPLOYEE);
-
+    public User updateUserCompany(Integer id, Integer company) {
+        User user = repository.findById(id).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+        user.setCompany(company);
         return repository.save(user);
     }
 }

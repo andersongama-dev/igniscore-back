@@ -10,22 +10,22 @@ public class Company {
     @Column(name = "pk_id_company")
     private Integer id;
 
-    @Column(name = "name_company", nullable = false, length = 150)
+    @Column(name = "name_company", nullable = false)
     private String name;
 
-    @Column(name = "cnpj_company", nullable = false, length = 18)
+    @Column(name = "cnpj_company", nullable = false, unique = true)
     private String cnpj;
 
-    @Column(name = "ie_company", length = 14)
+    @Column(name = "ie_company", unique = true)
     private String ie;
 
     @Column(name = "uf_ie_company", length = 2)
     private String ufIe;
 
-    @Column(name = "email_company", nullable = false, length = 254)
+    @Column(name = "email_company", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "phone_company", nullable = false, length = 13)
+    @Column(name = "phone_company", nullable = false, unique = true)
     private String phone;
 
     public Integer getId() {

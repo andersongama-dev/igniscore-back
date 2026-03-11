@@ -57,7 +57,7 @@ public class AuthController {
         newUser.setName(data.name());
         newUser.setEmail(data.email());
         newUser.setPassword(encryptedPassword);
-        newUser.setRole(UserRole.EMPLOYEE);
+        newUser.setRole(data.role());
 
         this.repository.save(newUser);
 
